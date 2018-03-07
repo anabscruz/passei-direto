@@ -10,30 +10,19 @@
 
 			<form method="post">
 
-				<input type="hidden" name="idcolecao" value="<%=idcolecao%>">
 				<div class="form-group">
 				    <label for="exampleInputEmail1">Nome</label>
-				    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome da disco">
+				    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome da disco" value="<%=disco.titulo%>">
 				</div>
 
 				<div class="form-group">
 				    <label for="exampleInputEmail1">Intérprete</label>
-				    <input type="text" class="form-control" id="interprete" name="interprete" placeholder="Qual o interprete do disco">
+				    <input type="text" class="form-control" id="interprete" name="interprete" placeholder="Qual o interprete do disco" value="<%=disco.interprete%>">
 				</div>
 
 				<div class="form-group">
 				    <label for="exampleInputEmail1">ano</label>
-				    <input type="text" class="form-control" id="ano" name="ano" placeholder="Qual o ano do disco">
-				</div>
-
-				<div class="form-group">
-				    <label for="exampleInputEmail1">Coleção</label>
-				    <select class="form-control" name="colecao">
-				    	<option value="0">Selecione uma coleção</option>
-				    	<%for (i in lista_colecoes){%>
-				    		<option value="<%=lista_colecoes[i].idcolecao%>"><%=lista_colecoes[i].nome%></option>
-				    	<%}%>
-				    </select>
+				    <input type="text" class="form-control" id="ano" name="ano" placeholder="Qual o ano do disco" value="<%=disco.ano%>" />
 				</div>
 
 				<button type="submit" class="btn btn-primary">Salvar</button>

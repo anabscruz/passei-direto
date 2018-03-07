@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	</head>
+
+	<body>
+		<div class="col"></div>
+		<div class="col">
+			<h1><%=colecao.nome%></h1>
+			<p><%=colecao.descricao%></p>
+			<!-- Lista de CDs da coleção-->
+
+			<%if (lista_discos.length > 0){ %>
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Título</th>
+							<th scope="col">Intérprete</th>
+							<th scope="col">Ano</th>
+							<th scope="col"></th>
+						</tr>
+					</thead>
+					<tbody>
+					<%for (i of lista_discos){%>
+						<tr>
+							<td>
+								<%=i.iddisco%>
+							</td>
+							<td>
+								<%=i.titulo%>
+							</td>
+							<td>
+								<%=i.interprete%>
+							</td>
+							<td>
+								<%=i.ano%>
+							</td>
+							<td>
+								<a href="/editar-disco/<%=i.iddisco%>">Editar Detalhes</a>
+							</td>
+						</tr>
+					<%}%>
+					</tbody>
+				</table>
+			<%}%>
+			<!-- Ação de adicionar CD-->
+			<button class="btn btn-primary" id="adddisco">
+				Adicionar Disco
+			</button>
+		</div>
+		<div class="col"></div>
+	</body>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+    		$("#adddisco").click(function(){
+    			location.href='/novo-disco/<%=colecao.idcolecao%>';
+    		});
+    	});
+    </script>
+
+</html>
