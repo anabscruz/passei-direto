@@ -26,15 +26,7 @@
 				    <input type="text" class="form-control" id="ano" name="ano" placeholder="Qual o ano do disco">
 				</div>
 
-				<div class="form-group">
-				    <label for="exampleInputEmail1">Coleção</label>
-				    <select class="form-control" name="colecao">
-				    	<option value="0">Selecione uma coleção</option>
-				    	<%for (i in lista_colecoes){%>
-				    		<option value="<%=lista_colecoes[i].idcolecao%>"><%=lista_colecoes[i].nome%></option>
-				    	<%}%>
-				    </select>
-				</div>
+				
 
 				<button type="submit" class="btn btn-primary">Salvar</button>
 			</form>
