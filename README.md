@@ -1,12 +1,12 @@
 # desafio-passei-direto
 
-##O que foi feito:
+## O que foi feito:
 * Inserir novos discos em uma coleção;
 * Editar informações sobre os discos;
 * Listar todos os discos de uma coleção;
 
 
-##Estrutura de banco de dados
+## Estrutura de banco de dados
 O banco de dados é composto por três entidades: colecao, discos e colecao_discos.
 
 ```
